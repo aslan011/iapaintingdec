@@ -10,6 +10,8 @@ tags:
   - center
   - right
 ---
+![](/static/img/house-painting-roi-4.jpg)
+
 # This is a Heading h1
 
 ## This is a Heading h2
