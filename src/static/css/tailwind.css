@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 /*Your Custom CSS Goes here*/
-
-body {
-  @apply bg-red-5;
-}
-
 h1 {
   @apply text-4xl tracking-tighter mb-3 text-center lg:text-7xl;
 }
