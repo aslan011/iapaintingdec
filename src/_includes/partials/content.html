@@ -1,14 +1,19 @@
 <div class="w-full max-w-2xl grid grid-cols-1 lg:grid-cols-2 gap-4 my-8 px-4 lg:mx-0">
 
+    <div class="flex flex-col lg:flex-row col-span-2 px-10">
     {% if quicklinks.links %}
 
         {% for item in quicklinks.links %}
-            <a href="{{item.url}}" class="hover:border-red-400 text-white">
-                <h3>{{item.title}}
-                    →</h3>
+            <a href="{{item.url}}" class="hover:text-red-600 text-white inline mx-3 text-center">
+                <h3 class="inline">{{item.title}}</h3>
             </a>
         {% endfor %}
 
     {% endif %}
+        </div>
+    <img class="p-3 bg-gray-100 rounded" src="../../static/img/job1.jpg">
+    <img class="p-3 bg-gray-100 rounded" src="../../static/img/job2.jpg">
+    <img class="p-3 bg-gray-100 rounded" src="../../static/img/job3.jpg">
+    <img class="p-3 bg-gray-100 rounded" src="../../static/img/job4.jpg">
 
 </div>

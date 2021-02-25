@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: portfolio
 title: Portfolio
 ---
 
@@ -7,8 +7,8 @@ title: Portfolio
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
-        <article class="my-8 bg-red-200 m-5 p-5 rounded-md">
-            <h2 class="font-bold text-3xl text-gray-400 mb-2">
+        <article class="my-8 m-5 p-5">
+            <h2 class="font-bold text-3xl text-gray-100 mb-2">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
                         {{ post.data.title }}
@@ -18,7 +18,7 @@ title: Portfolio
                 </a>
             </h2>
             <img src="{{ post.data.image }}" class="p-3 rounded-md">
-            <p class="text-base leading-6 text-gray-500 mb-3">
+            <p class="text-base leading-6 text-gray-100 mb-3">
                 <time>
                     {{ post.date | readableDate }}
                     by
@@ -26,17 +26,18 @@ title: Portfolio
                 </time>
             </p>
             {% if post.data.description %}
-                <p class="text-lg text-gray-500 mb-3">
+                <p class="text-lg text-gray-100 mb-3">
                     {{ post.data.description }}
                 </p>
             {% endif %}
 
             <p>
-                <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                <a href="{{ post.url | url }}" class="text-white hover:text-black font-bold text-lg">
                     Read more →
                 </a>
             </p>
 
         </article>
+        <hr class="bg-gray-100" style="height:0.3em;border:none;">
     {% endfor %}
 </section>
