@@ -1,10 +1,26 @@
 ---
+layout: portfolio
 title: Testimonials
-layout: default
 ---
 
-<div class="container max-w-3xl mt-6 px-6">
+<section class="mt-15">
+    {% set testimonialsList = collections.name %}
 
-    <h1 class="font-bold text-5xl">{{title}}</h1>
-
-</div>
+    {% for testimonial in testimonialsList | reverse %}
+        <article class="my-8 m-5 p-5">
+            <p class="text-base leading-6 text-gray-100 mb-3">
+                <time>
+                    {{ testimonial.date | readableDate }}
+                    -
+                    <a>{{ testimonial.client }}</a>
+                </time>
+            </p>
+            {% if testimonial.data.feedback %}
+                <p class="text-lg text-gray-100 mb-3">
+                    {{ testimonial.data.feedback}}
+                </p>
+            {% endif %}
+        </article>
+        <hr class="bg-gray-100" style="height:0.3em;border:none;">
+    {% endfor %}
+</section>

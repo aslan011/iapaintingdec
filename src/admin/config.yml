@@ -30,6 +30,17 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+  - label: "Testimonial"
+    name: "testimonial"
+    folder: "src/testimonialsList"
+    identifier_field: name
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Client name", name: "client", widget: "string" }
+      - { label: "Feedback", name: "feedback", widget: "string" }
   - label: "Settings"
     name: "settings"
     editor:
