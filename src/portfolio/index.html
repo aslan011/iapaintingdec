@@ -4,7 +4,7 @@ title: Portfolio
 ---
 
 <section class="mt-15">
-    {% set postslist = collections.post %}
+    {% set postslist = collections.portfolio %}
 
     {% for post in postslist | reverse %}
         <article class="my-8 m-5 p-5">
@@ -21,8 +21,6 @@ title: Portfolio
             <p class="text-base leading-6 text-gray-100 mb-3">
                 <time>
                     {{ post.date | readableDate }}
-                    by
-                    <a>{{ post.data.author }}</a>
                 </time>
             </p>
             {% if post.data.description %}
